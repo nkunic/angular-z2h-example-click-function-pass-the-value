@@ -6,14 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  // 2 Buttons approve/reject
+  // 2 Buttons approve/reject (Boolean)
   isApproved = true;
 
   approve(status) {
     this.isApproved = status;
   }
 
-  // 3 Buttons highlight
+  // 3 Buttons highlight (String)
   highligtColor = 'white';
 
   highligt(color: string) {
