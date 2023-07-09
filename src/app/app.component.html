@@ -1,27 +1,14 @@
-<h1>ANGULAR Directives</h1>
-<ul>
-  <li>Instructions in the DOM</li>
-  <li>
-    Ang. components are also directives with the template (trough component we
-    are instructing angular to place HTML & TS logic in the place of selector)
-  </li>
-</ul>
+<button 
+  class="success" 
+  (click)="approve(true)">
+  Approve
+</button>
 
-<h2>2 types of inbuilt directives in angular:</h2>
-<ol>
-  <li>
-    <strong>Structural directives</strong> - modify the DOM (ngIf, ngFor,
-    ngSwitch)
-  </li>
-  <li><strong>Attribute directives</strong></li>
-</ol>
-
-<h2>Structural directives</h2>
-
-<h3>ngIf</h3>
-
-<button class="success" (click)="approve(true)">Approve</button>
-<button class="danger" (click)="approve(false)">Reject</button>
+<button 
+  class="danger" 
+  (click)="approve(false)">
+  Reject
+</button>
 
 <p *ngIf="isApproved">Your app has been approved</p>
 <p *ngIf="!isApproved">Your app has been rejected</p>
