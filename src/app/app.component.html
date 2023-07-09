@@ -1,14 +1,32 @@
-<button 
-  class="success" 
-  (click)="approve(true)">
-  Approve
-</button>
+<div class="example">
+  <div class="box vertical">
+    <div>
+      <button class="success" (click)="approve(true)">Approve</button>
+      <button class="danger" (click)="approve(false)">Reject</button>
+    </div>
+    <p>
+      Your app has been
+      <span *ngIf="isApproved">approved</span>
+      <span *ngIf="!isApproved">rejected</span>
+    </p>
+  </div>
+</div>
 
-<button 
-  class="danger" 
-  (click)="approve(false)">
-  Reject
-</button>
-
-<p *ngIf="isApproved">Your app has been approved</p>
-<p *ngIf="!isApproved">Your app has been rejected</p>
+<div class="example">
+  <div class="box vertical">
+    <div>
+      <button class="success" (click)="highligt('green')">Sucess</button>
+      <button class="danger" (click)="highligt('red')">Danger</button>
+      <button class="info" (click)="highligt('blue')">Info</button>
+      <p
+        [ngClass]="{
+          green: highligtColor === 'green',
+          'red-color': highligtColor === 'red',
+          blue: highligtColor === 'blue'
+        }"
+      >
+        Click any button to highlight me!
+      </p>
+    </div>
+  </div>
+</div>

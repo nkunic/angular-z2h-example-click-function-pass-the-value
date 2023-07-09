@@ -1,11 +1,55 @@
+.example {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .box {
+    display: flex;
+    align-items: center;
+    width: 65%;
+    border: 1px solid black;
+    padding: 1.25rem;
+    &.vertical {
+      flex-direction: column;
+      justify-content: center;
+    }
+    &.horizontal {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.example + .example {
+  margin-top: 2.5rem;
+}
+button + button {
+  margin-left: 1rem;
+}
+button {
+  color: white;
+  cursor: pointer;
+}
 .success {
   background-color: green;
 }
-
 .danger {
   background-color: red;
 }
-
-button + button {
-  margin-left: 1rem;
+.info {
+  background-color: blue;
+}
+.green {
+  color: green;
+}
+.red-color {
+  color: red;
+}
+.blue {
+  color: blue;
 }
